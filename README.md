@@ -1,8 +1,12 @@
-# Template: ReactJS + Typescript + CSS
+# ToDO List App
 
-This repository was created using [ViteJS](https://vitejs.dev/) and it should be used only as a template for new ReactJS projects.
+This repository was created to practice Rocketseat's Ignite course concepts and solve challenge.
 
-### Stack:
+The application follows the design definitions from this [Figma](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate).
+
+### Stack and Tools:
+
+- ViteJS
 - ReactJS
 - Typescript
 - CSS Modules
