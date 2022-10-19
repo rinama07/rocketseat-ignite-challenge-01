@@ -3,8 +3,10 @@ import { useEffect, useState } from 'react';
 import styles from './App.module.css';
 import { Header } from './components/Header/Header';
 import { NewTaskForm } from './components/NewTaskForm/NewTaskForm';
+import { TaskList } from './components/TaskList/TaskList';
 import { tasks } from './mock/tasks';
 import { Task } from './types/task';
+import { getListWithItemUpdated } from './utils/list';
 
 export function App() {
   const [userTasks, setUserTasks] = useState<Task[]>([]);
@@ -25,12 +27,32 @@ export function App() {
     setUserTasks((userTasks) => userTasks.concat(newTask));
   }
 
+  function toggleTaskIsDone(taskId: number) {
+    const taskIndex = userTasks.findIndex((task) => task.id === taskId);
+
+    const selectedTask = userTasks[taskIndex];
+    const updatedTask: Task = {
+      ...selectedTask,
+      isDone: !selectedTask.isDone,
+    };
+
+    const updatedUserTasks = getListWithItemUpdated<Task>(
+      userTasks,
+      taskIndex,
+      updatedTask
+    );
+
+    setUserTasks(updatedUserTasks);
+  }
+
   return (
     <>
       <Header />
 
       <main className={styles.main}>
         <NewTaskForm onAddTask={addTask} />
+
+        <TaskList tasks={userTasks} onToggleTaskIsDone={toggleTaskIsDone} />
       </main>
     </>
   );

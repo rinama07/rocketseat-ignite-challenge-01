@@ -1,0 +1,48 @@
+.container {
+  margin-top: 4rem;
+  padding: 0 0.5rem;
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTotalIndicator label,
+.headerDoneIndicator label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.headerTotalIndicator label {
+  color: var(--blue-300);
+}
+
+.headerDoneIndicator label {
+  color: var(--purple-300);
+}
+
+.headerIndicator {
+  background-color: var(--gray-400);
+  border-radius: 999px;
+  color: var(--gray-200);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+}
+
+.list {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--gray-400);
+  border-radius: var(--border-radius);
+  list-style: none;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 40%;
+  }
+}
