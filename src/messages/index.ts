@@ -5,6 +5,7 @@ export const messages = {
   newTask: {
     input: {
       placeholder: 'Adicionar uma nova tarefa',
+      invalid: 'Este campo é obrigatório',
     },
     button: {
       label: 'Criar',
