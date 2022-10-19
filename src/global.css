@@ -1,6 +1,27 @@
+/* header: gray-700 */
+
 :root {
-  --black: #000000;
-  --white: #ffffff;
+  --purple: #8284fa;
+  --purple-dark: #5e60c3;
+
+  --blue: #4ea8de;
+  --blue-dark: #1e6f9f;
+
+  --gray-100: #f2f2f2;
+  --gray-200: #d9d9d9;
+  --gray-300: #808080;
+  --gray-400: #333333;
+  --gray-500: #262626;
+  --gray-600: #1a1a1a;
+  --gray-700: #0d0d0d;
+
+  --danger: #e25858;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+
+  --border-radius: 8px;
 }
 
 * {
@@ -10,8 +31,8 @@
 }
 
 body {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--gray-600);
+  color: var(--gray-300);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -19,13 +40,13 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--font-size-md);
   font-weight: 400;
 }
 
 :focus {
-  box-shadow: 0 0 0 2px var(--white);
+  box-shadow: 0 0 0 2px var(--purple);
   outline: transparent;
 }
 
@@ -34,7 +55,7 @@ button {
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px var(--white);
+  box-shadow: 0 0 0 2px var(--purple);
 }
 
 @media (max-width: 768px) {
