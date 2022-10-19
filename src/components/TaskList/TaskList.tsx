@@ -1,30 +1,12 @@
 import { messages } from '../../messages';
 import { Task } from '../../types/task';
 
+import { HeaderTaskCounter } from './HeaderTaskCounter';
 import styles from './TaskList.module.css';
 
 interface TaskListProps {
   onToggleTaskIsDone: (taskId: number) => void;
   tasks: Task[];
-}
-
-interface HeaderTaskIndicatorProps {
-  className?: string;
-  indicator: number;
-  label: string;
-}
-
-function HeaderTaskIndicator({
-  className = '',
-  indicator = 0,
-  label,
-}: HeaderTaskIndicatorProps) {
-  return (
-    <div className={className}>
-      <label>{label}</label>
-      <span className={styles.headerIndicator}>{indicator}</span>
-    </div>
-  );
 }
 
 export function TaskList({ onToggleTaskIsDone, tasks = [] }: TaskListProps) {
@@ -34,16 +16,16 @@ export function TaskList({ onToggleTaskIsDone, tasks = [] }: TaskListProps) {
   return (
     <div className={styles.container}>
       <header>
-        <HeaderTaskIndicator
-          className={styles.headerTotalIndicator}
+        <HeaderTaskCounter
+          className={styles.headerTotal}
           label={messages.taskList.header.createdLabel}
-          indicator={totalTasks}
+          count={totalTasks}
         />
 
-        <HeaderTaskIndicator
-          className={styles.headerDoneIndicator}
+        <HeaderTaskCounter
+          className={styles.headerDone}
           label={messages.taskList.header.doneLabel}
-          indicator={completedTasks}
+          count={completedTasks}
         />
       </header>
 
