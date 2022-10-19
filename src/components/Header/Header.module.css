@@ -19,9 +19,9 @@
 }
 
 .appName span:nth-child(even) {
-  color: var(--purple-dark);
+  color: var(--purple-500);
 }
 
 .appName span:nth-child(odd) {
-  color: var(--blue);
+  color: var(--blue-300);
 }

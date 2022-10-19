@@ -1,11 +1,11 @@
 /* header: gray-700 */
 
 :root {
-  --purple: #8284fa;
-  --purple-dark: #5e60c3;
+  --purple-300: #8284fa;
+  --purple-500: #5e60c3;
 
-  --blue: #4ea8de;
-  --blue-dark: #1e6f9f;
+  --blue-300: #4ea8de;
+  --blue-500: #1e6f9f;
 
   --gray-100: #f2f2f2;
   --gray-200: #d9d9d9;
@@ -47,7 +47,7 @@ button {
 }
 
 :focus {
-  box-shadow: 0 0 0 2px var(--purple);
+  box-shadow: 0 0 0 2px var(--purple-300);
   outline: transparent;
 }
 
@@ -56,7 +56,7 @@ button {
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px var(--purple);
+  box-shadow: 0 0 0 2px var(--purple-300);
 }
 
 @media (max-width: 768px) {
