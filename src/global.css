@@ -47,16 +47,13 @@ button {
 }
 
 :focus {
-  box-shadow: 0 0 0 2px var(--purple-300);
+  box-shadow: 0 0 0 2px var(--blue-300);
   outline: transparent;
 }
 
-button {
-  cursor: pointer;
-}
-
 button:focus {
-  box-shadow: 0 0 0 2px var(--purple-300);
+  box-shadow: 0 0 0 2px var(--blue-300);
+  outline: transparent;
 }
 
 @media (max-width: 768px) {
