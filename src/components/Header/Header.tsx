@@ -1,15 +1,16 @@
+import logoSrc from '../../assets/logo.svg';
+
 import styles from './Header.module.css';
 
-interface HeaderProps {
-  userName: string;
-}
-
-export function Header({ userName }: HeaderProps) {
+export function Header() {
   return (
     <header className={styles.header}>
-      <h1>This is just a simple template for ReactJS projects!</h1>
+      <img className={styles.logo} src={logoSrc} alt="ToDo App Logo" />
 
-      <p>Hello, {userName}</p>
+      <div className={styles.appName}>
+        <span>to</span>
+        <span>do</span>
+      </div>
     </header>
   );
 }
