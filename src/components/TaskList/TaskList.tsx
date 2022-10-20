@@ -1,8 +1,8 @@
 import { messages } from '../../messages';
 import { Task } from '../../types/task';
 import { TaskItem } from '../TaskItem/TaskItem';
-import { EmptyTaskList } from './EmptyTaskList';
 
+import { EmptyTaskList } from './EmptyTaskList';
 import { HeaderTaskCounter } from './HeaderTaskCounter';
 import styles from './TaskList.module.css';
 
