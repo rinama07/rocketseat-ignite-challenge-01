@@ -20,10 +20,8 @@ export const messages = {
     content: {
       empty: {
         icon: 'Lista de tarefas vazia',
-        text: [
-          'Você ainda não tem tarefas cadastradas',
-          'Crie tarefas e organize seus itens a fazer',
-        ],
+        title: 'Você ainda não tem tarefas cadastradas',
+        subtitle: 'Crie tarefas e organize seus itens a fazer',
       },
       list: {
         status: {

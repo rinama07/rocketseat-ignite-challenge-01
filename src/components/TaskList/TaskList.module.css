@@ -1,19 +1,20 @@
 .container {
   margin-top: 4rem;
   padding: 0 0.5rem;
+  width: 100%;
 }
 
 .container header {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
 }
 
 .list {
-  margin-top: 1.5rem;
   border-top: 1px solid var(--gray-400);
   border-radius: var(--border-radius);
   list-style: none;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 992px) {

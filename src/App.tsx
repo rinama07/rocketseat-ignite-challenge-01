@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react';
 
-import styles from './App.module.css';
-import { Header } from './components/Header/Header';
-import { NewTaskForm } from './components/NewTaskForm/NewTaskForm';
-import { TaskList } from './components/TaskList/TaskList';
 import { tasks } from './mock/tasks';
 import { Task } from './types/task';
 import { getListWithItemUpdated } from './utils/list';
 
+import { Header } from './components/Header/Header';
+import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
+import { NewTaskForm } from './components/NewTaskForm/NewTaskForm';
+import { TaskList } from './components/TaskList/TaskList';
+
+import styles from './App.module.css';
+
 export function App() {
+  const [isLoadingTasks, setIsLoadingTasks] = useState<boolean>(false);
   const [userTasks, setUserTasks] = useState<Task[]>([]);
 
   useEffect(() => {
-    setTimeout(() => setUserTasks(tasks), 1000);
+    setIsLoadingTasks(true);
+    setTimeout(() => {
+      setUserTasks(tasks);
+      setIsLoadingTasks(false);
+    }, 1000);
     console.log(userTasks);
   }, []);
 
@@ -45,6 +53,12 @@ export function App() {
     setUserTasks(updatedUserTasks);
   }
 
+  function deleteTask(taskId: number) {
+    setUserTasks((userTasks) => {
+      return userTasks.filter((task) => task.id !== taskId);
+    });
+  }
+
   return (
     <>
       <Header />
@@ -52,7 +66,15 @@ export function App() {
       <main className={styles.main}>
         <NewTaskForm onAddTask={addTask} />
 
-        <TaskList tasks={userTasks} onToggleTaskIsDone={toggleTaskIsDone} />
+        {isLoadingTasks ? (
+          <LoadingSpinner />
+        ) : (
+          <TaskList
+            onDeleteTask={deleteTask}
+            onToggleTaskIsDone={toggleTaskIsDone}
+            tasks={userTasks}
+          />
+        )}
       </main>
     </>
   );
