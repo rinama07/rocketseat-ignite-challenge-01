@@ -25,6 +25,7 @@ export function NewTaskForm({ onAddTask }: NewTaskFormProps) {
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
+    setNewTaskText('');
     onAddTask(newTaskText);
   }
 
