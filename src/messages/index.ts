@@ -14,8 +14,8 @@ export const messages = {
   },
   taskList: {
     header: {
-      createdLabel: 'Tarefas criadas',
-      doneLabel: 'Concluídas',
+      total: 'Tarefas criadas',
+      done: 'Concluídas',
     },
     content: {
       empty: {

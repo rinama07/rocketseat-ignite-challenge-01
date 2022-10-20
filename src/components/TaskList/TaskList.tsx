@@ -17,14 +17,13 @@ export function TaskList({ onToggleTaskIsDone, tasks = [] }: TaskListProps) {
     <div className={styles.container}>
       <header>
         <HeaderTaskCounter
-          className={styles.headerTotal}
-          label={messages.taskList.header.createdLabel}
+          labelColor="blue"
+          labelText={messages.taskList.header.total}
           count={totalTasks}
         />
 
         <HeaderTaskCounter
-          className={styles.headerDone}
-          label={messages.taskList.header.doneLabel}
+          labelText={messages.taskList.header.done}
           count={completedTasks}
         />
       </header>

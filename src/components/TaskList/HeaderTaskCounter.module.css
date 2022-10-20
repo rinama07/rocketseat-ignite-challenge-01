@@ -4,6 +4,14 @@
   line-height: 1.4;
 }
 
+.purple {
+  color: var(--purple-300);
+}
+
+.blue {
+  color: var(--blue-300);
+}
+
 .counter {
   background-color: var(--gray-400);
   border-radius: 999px;

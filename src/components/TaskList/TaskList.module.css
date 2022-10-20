@@ -9,14 +9,6 @@
   justify-content: space-between;
 }
 
-.headerTotal label {
-  color: var(--blue-300);
-}
-
-.headerDone label {
-  color: var(--purple-300);
-}
-
 .list {
   margin-top: 1.5rem;
   border-top: 1px solid var(--gray-400);
