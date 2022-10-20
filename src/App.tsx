@@ -17,6 +17,7 @@ export function App() {
 
   useEffect(() => {
     setIsLoadingTasks(true);
+
     setTimeout(() => {
       setUserTasks(tasks);
       setIsLoadingTasks(false);
