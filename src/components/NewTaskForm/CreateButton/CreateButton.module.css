@@ -1,0 +1,20 @@
+.button {
+  align-items: center;
+  background-color: var(--blue-500);
+  border-radius: var(--border-radius);
+  border: 0;
+  color: var(--gray-100);
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.button:hover {
+  background-color: var(--blue-300);
+}
+
+.button:disabled {
+  background-color: var(--blue-300);
+  cursor: not-allowed;
+}

@@ -1,0 +1,23 @@
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.purple {
+  color: var(--purple-300);
+}
+
+.blue {
+  color: var(--blue-300);
+}
+
+.counter {
+  background-color: var(--gray-400);
+  border-radius: 999px;
+  color: var(--gray-200);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+}

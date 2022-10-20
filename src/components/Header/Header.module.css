@@ -1,4 +1,27 @@
 .header {
-  max-width: 430px;
-  text-align: center;
+  align-items: center;
+  background-color: var(--gray-700);
+  display: flex;
+  justify-content: center;
+  padding: 4.5rem 0 5rem;
+  width: 100%;
+}
+
+.logo {
+  height: 2.25rem;
+  margin-right: 0.75rem;
+  width: 1.375rem;
+}
+
+.appName {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.appName span:nth-child(even) {
+  color: var(--purple-500);
+}
+
+.appName span:nth-child(odd) {
+  color: var(--blue-300);
 }

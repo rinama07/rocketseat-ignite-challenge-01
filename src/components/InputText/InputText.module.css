@@ -1,0 +1,13 @@
+.input {
+  background-color: var(--gray-500);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-700);
+  color: var(--gray-100);
+  flex: 1;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}

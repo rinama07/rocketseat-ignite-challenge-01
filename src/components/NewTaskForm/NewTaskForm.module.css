@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -1.75rem;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .form {
+    width: 50%;
+  }
+}
