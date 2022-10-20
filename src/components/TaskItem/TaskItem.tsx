@@ -1,5 +1,6 @@
 import { messages } from '../../messages';
 import { Task } from '../../types/task';
+import { DeleteButton } from '../DeleteButton/DeleteButton';
 
 import styles from './TaskItem.module.css';
 
@@ -18,12 +19,10 @@ export function TaskItem({ onChangeIsDone, onDelete, task }: TaskItemProps) {
         {task.isDone ? <s>{task.text}</s> : task.text}
       </p>
 
-      <button
+      <DeleteButton
         onClick={onDelete}
         title={messages.taskList.content.list.delete.icon}
-      >
-        {messages.taskList.content.list.delete.icon}
-      </button>
+      />
     </li>
   );
 }
