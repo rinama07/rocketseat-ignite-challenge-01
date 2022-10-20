@@ -1,0 +1,13 @@
+.container {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.container svg {
+  margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: 700;
+  line-height: 1.4;
+}
