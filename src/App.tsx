@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { tasks } from './mock/tasks';
 import { Task } from './types/task';
-import { getListWithItemUpdated } from './utils/list';
 
 import { Header } from './components/Header/Header';
 import { LoadingSpinner } from './components/LoadingSpinner/LoadingSpinner';
@@ -33,25 +32,19 @@ export function App() {
       text: taskText,
     };
 
-    setUserTasks((userTasks) => userTasks.concat(newTask));
+    setUserTasks((userTasks) => [...userTasks, newTask]);
   }
 
   function toggleTaskIsDone(taskId: number) {
-    const taskIndex = userTasks.findIndex((task) => task.id === taskId);
+    setUserTasks((userTasks) => {
+      return userTasks.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, isDone: !task.isDone };
+        }
 
-    const selectedTask = userTasks[taskIndex];
-    const updatedTask: Task = {
-      ...selectedTask,
-      isDone: !selectedTask.isDone,
-    };
-
-    const updatedUserTasks = getListWithItemUpdated<Task>(
-      userTasks,
-      taskIndex,
-      updatedTask
-    );
-
-    setUserTasks(updatedUserTasks);
+        return task;
+      });
+    });
   }
 
   function deleteTask(taskId: number) {
