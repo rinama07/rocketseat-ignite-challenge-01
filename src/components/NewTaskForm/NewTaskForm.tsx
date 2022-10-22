@@ -13,16 +13,20 @@ interface NewTaskFormProps {
 export function NewTaskForm({ onAddTask }: NewTaskFormProps) {
   const [newTaskText, setNewTaskText] = useState<string>('');
 
-  function handleChangeNewTaskInput(event: ChangeEvent<HTMLInputElement>) {
+  function handleChangeNewTaskInput(
+    event: ChangeEvent<HTMLInputElement>
+  ): void {
     setNewTaskText(event.target.value);
   }
 
-  function handleNewTaskInputInvalid(event: ChangeEvent<HTMLInputElement>) {
+  function handleNewTaskInputInvalid(
+    event: ChangeEvent<HTMLInputElement>
+  ): void {
     event.target.setCustomValidity(messages.newTask.input.invalid);
     setNewTaskText(event.target.value);
   }
 
-  function handleSubmit(event: FormEvent) {
+  function handleSubmit(event: FormEvent): void {
     event.preventDefault();
 
     setNewTaskText('');

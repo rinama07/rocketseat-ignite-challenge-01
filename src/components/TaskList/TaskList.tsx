@@ -7,8 +7,8 @@ import { HeaderTaskCounter } from './HeaderTaskCounter';
 import styles from './TaskList.module.css';
 
 interface TaskListProps {
-  onDeleteTask: (taskId: number) => void;
-  onToggleTaskIsDone: (taskId: number) => void;
+  onDeleteTask: (taskId: string) => void;
+  onToggleTaskIsDone: (taskId: string) => void;
   tasks: Task[];
 }
 
@@ -24,14 +24,14 @@ export function TaskList({
     <div className={styles.container}>
       <header>
         <HeaderTaskCounter
+          count={totalTasks}
           labelColor="blue"
           labelText={messages.taskList.header.total}
-          count={totalTasks}
         />
 
         <HeaderTaskCounter
-          labelText={messages.taskList.header.done}
           count={completedTasks}
+          labelText={messages.taskList.header.done}
         />
       </header>
 

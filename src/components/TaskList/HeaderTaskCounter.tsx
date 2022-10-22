@@ -18,6 +18,7 @@ export function HeaderTaskCounter({
       <label className={clsx(styles.label, styles[labelColor])}>
         {labelText}
       </label>
+
       <span className={styles.counter}>{count}</span>
     </div>
   );

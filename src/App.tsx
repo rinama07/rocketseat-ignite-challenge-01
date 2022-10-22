@@ -21,21 +21,18 @@ export function App() {
       setUserTasks(tasks);
       setIsLoadingTasks(false);
     }, 1000);
-    console.log(userTasks);
   }, []);
 
   function addTask(taskText: string): void {
-    const lastTaskId = userTasks[userTasks.length - 1].id ?? 0;
-
     const newTask = {
-      id: lastTaskId + 1,
+      id: String(new Date().getTime()),
       text: taskText,
     };
 
     setUserTasks((userTasks) => [...userTasks, newTask]);
   }
 
-  function toggleTaskIsDone(taskId: number) {
+  function toggleTaskIsDone(taskId: string): void {
     setUserTasks((userTasks) => {
       return userTasks.map((task) => {
         if (task.id === taskId) {
@@ -47,7 +44,7 @@ export function App() {
     });
   }
 
-  function deleteTask(taskId: number) {
+  function deleteTask(taskId: string): void {
     setUserTasks((userTasks) => {
       return userTasks.filter((task) => task.id !== taskId);
     });
